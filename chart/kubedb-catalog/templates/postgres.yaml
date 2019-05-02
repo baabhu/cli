@@ -323,6 +323,7 @@ spec:
     databasePolicyName: postgres-db
     snapshotterPolicyName: postgres-snapshot
 
+---
 # After 0.11.0
 
 apiVersion: catalog.kubedb.com/v1alpha1
@@ -334,7 +335,7 @@ metadata:
 spec:
   version: "9.6"
   db:
-    image: "{{ .Values.dockerRegistry }}/postgres:9.6-v4"
+    image: "{{ .Values.dockerRegistry }}/postgres:9.6-v5"
   exporter:
     image: "{{ .Values.dockerRegistry }}/postgres_exporter:v0.4.7"
   tools:
@@ -353,7 +354,7 @@ metadata:
 spec:
   version: "9.6.7"
   db:
-    image: "{{ .Values.dockerRegistry }}/postgres:9.6.7-v4"
+    image: "{{ .Values.dockerRegistry }}/postgres:9.6.7-v5"
   exporter:
     image: "{{ .Values.dockerRegistry }}/postgres_exporter:v0.4.7"
   tools:
@@ -372,7 +373,7 @@ metadata:
 spec:
   version: "10.2"
   db:
-    image: "{{ .Values.dockerRegistry }}/postgres:10.2-v4"
+    image: "{{ .Values.dockerRegistry }}/postgres:10.2-v5"
   exporter:
     image: "{{ .Values.dockerRegistry }}/postgres_exporter:v0.4.7"
   tools:
@@ -391,7 +392,7 @@ metadata:
 spec:
   version: "10.6"
   db:
-    image: "{{ .Values.dockerRegistry }}/postgres:10.6-v1"
+    image: "{{ .Values.dockerRegistry }}/postgres:10.6-v2"
   exporter:
     image: "{{ .Values.dockerRegistry }}/postgres_exporter:v0.4.7"
   tools:
@@ -410,7 +411,7 @@ metadata:
 spec:
   version: "11.1"
   db:
-    image: "{{ .Values.dockerRegistry }}/postgres:11.1-v1"
+    image: "{{ .Values.dockerRegistry }}/postgres:11.1-v2"
   exporter:
     image: "{{ .Values.dockerRegistry }}/postgres_exporter:v0.4.7"
   tools:
