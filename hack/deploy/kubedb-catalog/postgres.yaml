@@ -412,3 +412,22 @@ spec:
   podSecurityPolicies:
     databasePolicyName: postgres-db
     snapshotterPolicyName: postgres-snapshot
+
+---
+apiVersion: catalog.kubedb.com/v1alpha1
+kind: PostgresVersion
+metadata:
+  name: "11.2"
+  labels:
+    app: kubedb
+spec:
+  version: "11.2"
+  db:
+    image: "${KUBEDB_DOCKER_REGISTRY}/postgres:11.2"
+  exporter:
+    image: "${KUBEDB_DOCKER_REGISTRY}/postgres_exporter:v0.4.7"
+  tools:
+    image: "${KUBEDB_DOCKER_REGISTRY}/postgres-tools:11.1"
+  podSecurityPolicies:
+    databasePolicyName: postgres-db
+    snapshotterPolicyName: postgres-snapshot
